@@ -66,7 +66,7 @@ function App() {
                         <div className="z-20 flex justify-center">
                             <img className='z-20 w-[250px] md:w-[350px]' src={srcHeart1} alt=""/>
                         </div>
-                        <div className="z-20 flex justify-center items-center mt-10 relative">
+                        <div className="z-20 flex justify-center items-center mt-0 relative">
                             <img className='absolute w-[300px] md:w-[400px]' src={srcLoveText} alt=""/>
                             <p className="block md:hidden font-kodchasan text-[26px] md:text-[48px] text-hd-dark text-center">Love
                                 you <br/> forever and ever.</p>
