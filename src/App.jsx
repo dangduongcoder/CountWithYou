@@ -1,4 +1,4 @@
-import {useState} from 'react'
+import {useState, useEffect} from 'react'
 
 import srcImgBg from './assets/images/bg.png'
 import srcImgHeart1 from './assets/images/Picture9.png'
@@ -12,6 +12,12 @@ import srcHeart3 from './assets/images/Picture4.png'
 import CONFIG from "./configs.js";
 
 function App() {
+
+
+    useEffect(() => {
+        document.title = CONFIG.docsTitle;
+    }, []);
+
 
     const startDate = new Date(CONFIG.startDate);
     const currentDate = new Date();
@@ -38,19 +44,24 @@ function App() {
             }>
                 <div
                     className="header h-[60px] md:h-[100px] w-full border-b-2 border-hd-gray border-solid flex items-center justify-center">
-                    <h2 className="font-lateef text-xl md:text-3xl tracking-[10px] md:tracking-[25px] text-center">{`${CONFIG.headerTitle}`}</h2>
+                    <h2 className="font-lateef text-xl md:text-3xl tracking-[8px] md:tracking-[25px] text-center">{`${CONFIG.headerTitle}`}</h2>
                 </div>
                 <div className="container max-w-[700px] mx-auto flex flex-col justify-center">
                     <div className="mt-6">
-                        <h2 className="font-kodchasan text-xl md:text-2xl text-hd-dark font-normal text-center"><span
-                            className="text-hd-red font-bold">{`${CONFIG.loverName}`}</span>, I have fallen in love with you for</h2>
+                        <h2 className="hidden md:block font-kodchasan text-xl md:text-2xl text-hd-dark font-normal text-center"><span
+                            className="text-hd-red font-bold">{`${CONFIG.loverName}`}</span>, I have fallen in love with
+                            you for:</h2>
+                        <h2 className="block md:hidden font-kodchasan text-xl md:text-2xl text-hd-dark font-normal text-center"><span
+                            className="text-hd-red font-bold">{`${CONFIG.loverName}`}</span>, I have fallen in love <br/> with
+                            you for:</h2>
                     </div>
                     <div className="relative">
                         <img className="absolute w-[700px] z-0" src={srcImgHeart1} alt=""/>
                         <div className="grid grid-cols-3 z-20 mt-[-20px] md:mt-6 px-6 mb-[-40px]">
                             <div className="flex flex-col items-center justify-center z-20">
                                 <p className="font-crushed text-3xl text-hd-gray">from</p>
-                                <p className="font-serif font-normal text-hd-red text-4xl text-center mt-1">{`${startDay}`} <br/>{`${startMonth}`} <br/>{`${startYear}`}
+                                <p className="font-serif font-normal text-hd-red text-4xl text-center mt-1">{`${startDay}`}
+                                    <br/>{`${startMonth}`} <br/>{`${startYear}`}
                                 </p>
                             </div>
                             <div className="flex flex-col justify-center items-center z-20 translate-y-[20px]">
@@ -59,7 +70,8 @@ function App() {
                             </div>
                             <div className="flex flex-col items-center justify-center z-20">
                                 <p className="font-crushed text-3xl text-hd-gray">to</p>
-                                <p className="font-serif font-normal text-hd-red text-4xl text-center mt-1">{`${currentDay}`} <br/>{`${currentMonth}`} <br/>{`${currentYear}`}
+                                <p className="font-serif font-normal text-hd-red text-4xl text-center mt-1">{`${currentDay}`}
+                                    <br/>{`${currentMonth}`} <br/>{`${currentYear}`}
                                 </p>
                             </div>
                         </div>
