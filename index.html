@@ -1,31 +1,45 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/CountWithYou/heart.png" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8"/>
+    <link rel="icon" type="image/svg+xml" href="/CountWithYou/heart.png"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Vite + React</title>
-    <script type="module" crossorigin src="/CountWithYou/assets/index-5Y8i67yi.js"></script>
-    <link rel="stylesheet" crossorigin href="/CountWithYou/assets/index-GI-pfJWi.css">
-  </head>
-  <body>
-    <div id="root"></div>
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
-    <script>
-      $(function () {
+  <script type="module" crossorigin src="/CountWithYou/assets/index-G-4ISFFd.js"></script>
+  <link rel="stylesheet" crossorigin href="/CountWithYou/assets/index-4BtlmQWE.css">
+</head>
+<body>
+<div id="loader" class="fixed h-screen w-screen bg-[#FBF1CF] flex justify-center items-center z-40">
+    <div class="rhombus ">
+        <div class="circle1"></div>
+        <div class="circle2"></div>
+    </div>
+</div>
+<div id="root" class="z-0"></div>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+<script>
+    $(document).ready(() => {      //Do the code in the {}s when the window has loaded
+        setTimeout(()=> {
+            $("#loader").fadeOut("slow");  //Fade out the #loader div
+        }, 1500)
+        // console.log('load')
+    });
+
+
+    $(function () {
         // Get random number between 2 ranges
         function randomNum(m, n) {
-          m = parseInt(m);
-          n = parseInt(n);
-          return Math.floor(Math.random() * (n - m + 1)) + m;
+            m = parseInt(m);
+            n = parseInt(n);
+            return Math.floor(Math.random() * (n - m + 1)) + m;
         }
 
         function heartAnimation() {
-          $this = $(".heart-effect-text");
-          var heartCount = ($this.width() / 50) * 5;
-          for (var i = 0; i < heartCount; i++) {
-            var heartSize = randomNum(60, 120) / 10;
-            $this.append(
+            $this = $(".heart-effect-text");
+            var heartCount = ($this.width() / 50) * 5;
+            for (var i = 0; i < heartCount; i++) {
+                var heartSize = randomNum(60, 120) / 10;
+                $this.append(
                     '<span class="tiny-heart" style="top: ' +
                     randomNum(40, 80) +
                     "%; left: " +
@@ -39,13 +53,13 @@
                     "s; animation-duration: " +
                     randomNum(2, 5) +
                     's"></span>'
-            );
-          }
+                );
+            }
         }
 
         heartAnimation();
-      });
+    });
 
-    </script>
-  </body>
+</script>
+</body>
 </html>
