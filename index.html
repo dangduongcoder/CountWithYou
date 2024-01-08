@@ -5,8 +5,8 @@
     <link rel="icon" type="image/svg+xml" href="/CountWithYou/heart.png"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Vite + React</title>
-  <script type="module" crossorigin src="/CountWithYou/assets/index-TwsixmKC.js"></script>
-  <link rel="stylesheet" crossorigin href="/CountWithYou/assets/index-4BtlmQWE.css">
+  <script type="module" crossorigin src="/CountWithYou/assets/index-aUscKQdL.js"></script>
+  <link rel="stylesheet" crossorigin href="/CountWithYou/assets/index-kBDYshGX.css">
 </head>
 <body>
 <div id="loader" class="fixed h-screen w-screen bg-[#FBF1CF] flex justify-center items-center z-40">
@@ -15,7 +15,7 @@
         <div class="circle2"></div>
     </div>
 </div>
-<div id="root" class="z-0"></div>
+<div id="root" class="z-0 heart-effect-text"></div>
 <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
 <script>
     $(document).ready(() => {      //Do the code in the {}s when the window has loaded
@@ -36,7 +36,7 @@
 
         function heartAnimation() {
             $this = $(".heart-effect-text");
-            var heartCount = ($this.width() / 50) * 5;
+            var heartCount = ($this.width() / 50) * 2;
             for (var i = 0; i < heartCount; i++) {
                 var heartSize = randomNum(60, 120) / 10;
                 $this.append(
