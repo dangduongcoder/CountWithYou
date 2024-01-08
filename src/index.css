@@ -12,27 +12,47 @@
 }
 
 .tiny-heart {
+    z-index: 30;
     position: absolute;
     opacity: 0;
     background-color: #ED6C5D;
     box-shadow: 0px 0px 50px 4px transparentize(#ED6C5D, .3);
     animation: animated-heart infinite ease-in;
-    &:before, &:after {
-        content: '';
-        position: absolute;
-        border-radius: 50%;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: #ED6C5D;
-    }
-    &:before {
-        transform: translateX(-50%);
-    }
-    &:after {
-        transform: translateY(-50%)
-    }
+    /*&:before, &:after {*/
+    /*    content: '';*/
+    /*    position: absolute;*/
+    /*    border-radius: 50%;*/
+    /*    top: 0;*/
+    /*    left: 0;*/
+    /*    width: 100%;*/
+    /*    height: 100%;*/
+    /*    background-color: #ED6C5D;*/
+    /*}*/
+    /*&:before {*/
+    /*    transform: translateX(-50%);*/
+    /*}*/
+    /*&:after {*/
+    /*    transform: translateY(-50%)*/
+    /*}*/
+}
+
+.tiny-heart:before, .tiny-heart:after {
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #ED6C5D;
+}
+
+.tiny-heart:before {
+    transform: translateX(-50%);
+}
+
+.tiny-heart:after {
+    transform: translateY(-50%)
 }
 
 @keyframes animated-heart {

@@ -13,7 +13,7 @@
         <div class="circle2"></div>
     </div>
 </div>
-<div id="root" class="z-0"></div>
+<div id="root" class="z-0 heart-effect-text"></div>
 <script type="module" src="/src/main.jsx"></script>
 <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
 <script>
@@ -35,7 +35,7 @@
 
         function heartAnimation() {
             $this = $(".heart-effect-text");
-            var heartCount = ($this.width() / 50) * 5;
+            var heartCount = ($this.width() / 50) * 2;
             for (var i = 0; i < heartCount; i++) {
                 var heartSize = randomNum(60, 120) / 10;
                 $this.append(
