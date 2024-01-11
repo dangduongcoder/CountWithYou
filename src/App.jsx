@@ -66,7 +66,7 @@ function App() {
                                 </p>
                             </div>
                             <div className="flex flex-col justify-center items-center z-20 translate-y-[20px]">
-                                <p className="font-serif font-normal text-hd-red text-[120px] text-center heart-effect-text relative">{dayCounter}</p>
+                                <p className="font-serif font-normal text-hd-red text-[120px] text-center relative">{dayCounter}</p>
                                 <p className="font-script font-normal text-hd-dark text-[54px] text-center relative translate-y-[-80px]">days</p>
                             </div>
                             <div className="flex flex-col items-center justify-center z-20">
